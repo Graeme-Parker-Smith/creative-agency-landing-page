@@ -51,6 +51,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Commissioner", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .container {
@@ -198,8 +205,14 @@ body {
 }
 .header nav {
   position: relative;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  height: 6.875rem;
+  padding: 1.5rem;
+}
+@media (min-width: 48em) {
+  .header nav {
+    height: 11.125rem;
+    padding: 0;
+  }
 }
 .header__logo {
   height: 1.875rem;
@@ -236,21 +249,79 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+@media (min-width: 48em) {
+  .header__section1 {
+    height: 100%;
+    width: 330px;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+}
+@media (min-width: 48em) {
+  .header__section2 {
+    height: 100%;
+    width: 438px;
+    background-color: #f94f4f;
+  }
+}
+.header__links {
+  height: 100%;
+}
+@media (min-width: 48em) {
+  .header__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .header__links a {
-  font-size: 0.75rem;
   transition: 200ms ease-in-out;
-  padding: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  padding: 0.5rem;
 }
 .header__links a:not(:last-child) {
-  margin-right: 1.125rem;
+  margin-right: 0.5rem;
 }
 .header__links a:hover, .header__links a:active {
   color: black;
 }
 .header__links .current-link {
   color: black;
+}
+
+.btn {
+  height: 64px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: 64px;
+  display: flex;
+  transition: background 200ms ease-in-out;
+  font-size: 15px;
+  text-align: center;
+}
+.btn--primary {
+  background: black;
+  width: 100%;
+  color: white;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.btn--primary.about-btn {
+  padding: 0;
+  margin: 0;
+}
+.btn--primary:hover {
+  background: #191921;
+}
+.btn--primary:hover g {
+  stroke: white;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,20 +4,23 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;800&display=swap" rel="stylesheet" />
 
 		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 		<link rel="stylesheet" href="app/scss/style.css" />
 		<title>Frontend Mentor | Creative single page site</title>
 	</head>
 	<body>
-			<header class="header">
-				<nav class="container container--py flex flex-jc-sb flex-ai-c">
+		<header class="header">
+			<nav class="flex flex-jc-sb flex-ai-c">
+				<div class="header__section1">
 					<a href="" class="header__logo">
 						<img src="assets/desktop/logo.svg" alt="logo" height="30" width="161" />
 					</a>
+				</div>
+				<div class="header__section2">
 					<a href="#" id="btnHamburger" class="header__toggle hide-for-desktop">
 						<span></span>
 						<span></span>
@@ -27,24 +30,23 @@
 						<a href="#">About</a>
 						<a href="#">Service</a>
 						<a href="#">Projects</a>
-						<a href="#">Schedule a Call</a>
+						<a href="#">
+							<button class="btn btn--primary">Schedule a Call</button>
+						</a>
 					</div>
-				</nav>
+				</div>
 				<div class="header__menu has-fade">
 					<a href="#">About</a>
 					<a href="#">Service</a>
 					<a href="#">Projects</a>
 					<a href="#">Schedule a Call</a>
 				</div>
-			</header>
-      
-      <main class="main">
-        <section class="hero">
+			</nav>
+		</header>
 
-        </section>
-      </main>
-
-  
+		<main class="main">
+			<section class="hero"></section>
+		</main>
 
 		About Service Projects Schedule a call Branding & website design agency We specialize in visual storytelling by
 		creating cohesive brand and website design solutions for small businesses, giving lasting impressions to
@@ -58,8 +60,6 @@
 		merchandise New Majestic Hotel 2018 Project Brand identity & web design Crypto Dashboard 2016 Project Let's
 		build something great together. Schedule a Call
 
-    <footer class="footer">
-      
-    </footer>
+		<footer class="footer"></footer>
 	</body>
 </html>

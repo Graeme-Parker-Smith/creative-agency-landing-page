@@ -27,8 +27,13 @@
 
     nav {
         position: relative;
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
+        height: 6.875rem;
+        padding: 1.5rem;
+
+        @include breakpoint-up(medium) {
+            height: 11.125rem;
+            padding: 0;
+        }
     }
 
     &__logo {
@@ -75,17 +80,41 @@
         }
     }
 
+    &__section1 {
+        @include breakpoint-up(medium) {
+            height: 100%;
+            width: 330px;
+            padding: 40px;
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+    }
+
+    &__section2 {
+        @include breakpoint-up(medium) {
+            height: 100%;
+            width: 438px;
+            background-color: $red;
+        }
+    }
+
     &__links {
+        height: 100%;
+        @include breakpoint-up(medium) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         a {
             // margin: 0 3.125rem;
-            font-size: $font-sm;
+
             transition: 200ms ease-in-out;
-            padding: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            padding: 0.5rem;
 
             &:not(:last-child) {
-                margin-right: 1.125rem;
+                margin-right: 0.5rem;
             }
 
             &:hover,
