@@ -266,7 +266,7 @@ a {
   .header__section2 {
     height: 100%;
     background-color: #f94f4f;
-    flex-basis: calc(57vw - (0.172 * (100vw - 768px) ) );
+    flex-basis: calc(57vw - min( (0.172 * (100vw - 768px)), 8vw ) );
   }
 }
 .header__links {

@@ -96,9 +96,11 @@
         @include breakpoint-up(medium) {
             height: 100%;
             background-color: $red;
+
             // after htting tablet breakpoint(768px), fluidly reduce from
             // 57vw to 49vw at desktop breakpoint(1440px)
-            flex-basis: calc(57vw - (0.172 * (100vw - 768px) ) );
+            flex-basis: calc(57vw - min( (0.172 * (100vw - 768px)), 8vw ) );
+
         }
     }
 
