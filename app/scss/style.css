@@ -62,20 +62,10 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: calc(100% - 3rem);
-}
-@media (min-width: 48em) {
-  .container {
-    max-width: calc(100% - 5rem);
-  }
-}
-@media (min-width: 64em) {
-  .container {
-    max-width: calc(min(100% - 5rem, 69.375rem));
-  }
+  max-width: 90rem;
 }
 .container--pall {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 @media (min-width: 48em) {
   .container--pall {
@@ -84,12 +74,12 @@ a {
 }
 @media (min-width: 64em) {
   .container--pall {
-    padding: 3.75rem;
+    padding: 10.3125rem;
   }
 }
 .container--py {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 @media (min-width: 48em) {
   .container--py {
@@ -99,35 +89,47 @@ a {
 }
 @media (min-width: 64em) {
   .container--py {
-    padding-top: 3.75rem;
-    padding-bottom: 3.75rem;
+    padding-top: 10.3125rem;
+    padding-bottom: 10.3125rem;
   }
 }
 .container--px {
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+@media (min-width: 48em) {
+  .container--px {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+}
+@media (min-width: 64em) {
+  .container--px {
+    padding-right: 10.3125rem;
+    padding-left: 10.3125rem;
+  }
 }
 .container--pt {
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 @media (min-width: 48em) {
   .container--pt {
-    padding-top: 5rem;
+    padding-top: 2.5rem;
   }
 }
 .container--pr {
-  padding-right: 2rem;
+  padding-right: 1.5rem;
 }
 .container--pb {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 @media (min-width: 64em) {
   .container--pb {
-    padding-bottom: 3.75rem;
+    padding-bottom: 10.3125rem;
   }
 }
 .container--pl {
-  padding-left: 2rem;
+  padding-left: 1.5rem;
 }
 
 .flex {
@@ -263,8 +265,8 @@ a {
 @media (min-width: 48em) {
   .header__section2 {
     height: 100%;
-    width: 438px;
     background-color: #f94f4f;
+    flex-basis: calc(57vw - (0.172 * (100vw - 768px) ) );
   }
 }
 .header__links {
@@ -300,18 +302,20 @@ a {
   padding: 0;
   line-height: 64px;
   display: flex;
-  transition: background 200ms ease-in-out;
-  font-size: 15px;
+  align-items: center;
   text-align: center;
+  transition: background 200ms ease-in-out;
+  font-size: 1rem;
 }
 .btn--primary {
   background: black;
-  width: 100%;
   color: white;
   padding-right: 2rem;
   padding-left: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 800;
 }
 .btn--primary.about-btn {
   padding: 0;

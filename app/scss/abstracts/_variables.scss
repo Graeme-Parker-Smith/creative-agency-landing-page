@@ -8,6 +8,7 @@ $textBlack: rgb(0, 0, 0);
 // Font Sizes
 $font-sm: 0.75rem; // 12px
 $font-med: 0.9375rem; // 15px
+$font-reg: 1rem;
 // $font-lg: 1.5rem; // 24px
 $font-lg: 2.5rem; // 40px
 $font-xlg: 3.125rem; // 50px
@@ -16,3 +17,8 @@ $font-xlg: 3.125rem; // 50px
 // Font Families
 $commissioner: 'Commissioner', sans-serif;
 // $public: "Public Sans", sans-serif;
+
+// Container Padding
+$mobile: 1.5rem;
+$tablet: 2.5rem;
+$desktop: 10.3125rem;

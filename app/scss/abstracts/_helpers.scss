@@ -1,0 +1,134 @@
+// Spacing
+.container {
+	margin: 0 auto;
+	max-width: 90rem; // 1440px for desktop
+
+	// max-width: calc(100% - 3rem);
+	// @include breakpoint-up(medium) {
+	// 	max-width: calc(100% - 5rem);
+	// }
+	// @include breakpoint-up(large) {
+	// 	max-width: calc(min(100% - 5rem, 69.375rem));
+	// }
+
+	&--pall {
+		padding: $mobile;
+
+		@include breakpoint-up(medium) {
+			padding: $tablet;
+		}
+		@include breakpoint-up(large) {
+			padding: $desktop;
+		}
+	}
+	&--py {
+		padding-top: $mobile;
+		padding-bottom: $mobile;
+
+		@include breakpoint-up(medium) {
+			padding-top: $tablet;
+			padding-bottom: $tablet;
+		}
+		@include breakpoint-up(large) {
+			padding-top: $desktop;
+			padding-bottom: $desktop;
+		}
+	}
+	&--px {
+		padding-right: $mobile;
+		padding-left: $mobile;
+
+        @include breakpoint-up(medium) {
+			padding-right: $tablet;
+			padding-left: $tablet;
+		}
+		@include breakpoint-up(large) {
+			padding-right: $desktop;
+			padding-left: $desktop;
+		}
+	}
+	&--pt {
+		padding-top: $mobile;
+
+		@include breakpoint-up(medium) {
+			padding-top: $tablet;
+		}
+	}
+	&--pr {
+		padding-right: $mobile;
+	}
+	&--pb {
+		padding-bottom: $mobile;
+
+		@include breakpoint-up(large) {
+			padding-bottom: $desktop;
+		}
+	}
+	&--pl {
+		padding-left: $mobile;
+	}
+}
+
+// Flexbox
+.flex {
+	display: flex;
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+
+	&-half {
+		flex-basis: 50%;
+	}
+
+	&--lg {
+		@include breakpoint-up(large) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&-half--lg {
+		@include breakpoint-up(large) {
+			flex-basis: calc(50% - 2rem);
+		}
+	}
+}
+
+// Grid
+.grid--2x2 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--4x4 {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+	align-items: center;
+}
+
+.pad-20 {
+	padding: 20px;
+}
+
+// Visibility
+.hide-for-mobile {
+	@include breakpoint-down(small) {
+		display: none;
+	}
+}
+
+.hide-for-desktop {
+	@include breakpoint-up(medium) {
+		display: none;
+	}
+}

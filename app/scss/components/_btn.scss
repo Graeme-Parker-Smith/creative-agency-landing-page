@@ -7,21 +7,25 @@
     padding: 0;
     line-height: 64px;
     display: flex;
-    transition: background 200ms ease-in-out;
-    font-size: 15px;
+    align-items: center;
     text-align: center;
+    transition: background 200ms ease-in-out;
+    font-size: $font-reg;
     // justify-content: center;
     // align-items: center;
 
 
     &--primary {
         background: $textBlack;
-        width: 100%;
+        // width: 100%;
         color: $white;
         padding-right: 2rem;
         padding-left: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
+
+        font-size: 1rem;
+        font-weight: 800;
 
         &.about-btn {
             padding: 0;
