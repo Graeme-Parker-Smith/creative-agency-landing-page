@@ -2,11 +2,15 @@
     position: relative;
     z-index: 1;
 
-    // Hamburger Open Styles
+    // Hamburger Open Styles (style rules for when header element has "open" class)
     &.open {
+        nav {
+            z-index: 3;
+        }
         .header__toggle {
             > span:first-child {
                 transform: rotate(48deg);
+                background: $textBlack;
             }
 
             > span:nth-child(2) {
@@ -15,6 +19,7 @@
 
             > span:last-child {
                 transform: rotate(-48deg);
+                background: $textBlack;
             }
         }
 
@@ -24,8 +29,26 @@
             right: 0;
             top: 6.875rem;
             padding: 1.75rem;
+            z-index: 2;
+        }
+    }
+    // full screen overlay hidden by default
+    .overlay {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        // background-color: $darkBlue;
+        background-image: linear-gradient(rgba(0,0,0,0.5), transparent);
 
-            
+        // overlay becomes visible after adding "fade-in" class
+        &.fade-in {
+            @include breakpoint-down(small) {
+                display: block;
+                z-index: 2;
+            }
         }
     }
 
@@ -50,7 +73,6 @@
 
     &__toggle {
         // Mobile Menu Toggle
-
         > span {
             display: block;
             width: 26px;
@@ -80,11 +102,11 @@
             color: #ffffff;
             text-align: center;
 
-            &:last-child{
+            &:last-child {
                 padding: 1.5rem 1.125rem;
                 display: flex;
 
-                @include breakpoint-up(large){
+                @include breakpoint-up(large) {
                     padding: 1.5rem 2.875rem;
                 }
             }
@@ -101,7 +123,7 @@
             justify-content: start;
             margin-left: $tablet;
         }
-        @include breakpoint-up(large){
+        @include breakpoint-up(large) {
             margin-left: $desktop;
         }
     }
@@ -113,8 +135,7 @@
 
             // after hitting tablet breakpoint(768px), fluidly reduce from
             // 57vw to 49vw at desktop breakpoint(1440px)
-            flex-basis: calc(57vw - min( (0.172 * (100vw - 768px)), 8vw ) );
-
+            flex-basis: calc(57vw - min((0.172 * (100vw - 768px)), 8vw));
         }
     }
 
@@ -125,13 +146,13 @@
             align-items: center;
             justify-content: center;
             // margin-left: 1.5rem;
-            @include breakpoint-up(large){
+            @include breakpoint-up(large) {
                 margin-left: 3.8125rem;
                 justify-content: flex-start;
                 font-size: $font-reg;
             }
         }
-   
+
         a {
             // margin: 0 3.125rem;
 
@@ -144,13 +165,13 @@
                     margin-right: 1rem;
                 }
             }
-            &:nth-last-child(2){
+            &:nth-last-child(2) {
                 margin-right: 2.5rem;
             }
-            &:last-child{
+            &:last-child {
                 padding: 1.5rem 1.125rem;
 
-                @include breakpoint-up(large){
+                @include breakpoint-up(large) {
                     padding: 1.5rem 2.875rem;
                 }
             }
@@ -159,8 +180,8 @@
             // &:active {
             //    font-weight: 700;
             // }
-            &:hover:not(:last-child){
-                // prevent layout shift due to 
+            &:hover:not(:last-child) {
+                // prevent layout shift due to
                 // size of a tags changing on font-weight change
                 text-shadow: 1px 0px 0px white;
             }
