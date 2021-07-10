@@ -6,7 +6,7 @@
     &.open {
         .header__toggle {
             > span:first-child {
-                transform: rotate(45deg);
+                transform: rotate(48deg);
             }
 
             > span:nth-child(2) {
@@ -14,7 +14,7 @@
             }
 
             > span:last-child {
-                transform: rotate(-45deg);
+                transform: rotate(-48deg);
             }
         }
 
@@ -22,6 +22,10 @@
             display: block;
             position: absolute;
             right: 0;
+            top: 6.875rem;
+            padding: 1.75rem;
+
+            
         }
     }
 
@@ -62,21 +66,28 @@
     }
 
     &__menu {
-        background: $white;
+        background: $bgBlack;
         padding: 1.03125rem;
-        width: 14rem;
-        height: 11.625rem;
+        width: 15.75rem;
+        height: 18.25rem;
         margin: 0 2rem 0 auto;
         display: none;
 
         a {
-            font-size: $font-sm;
+            font-size: $font-reg;
             padding: 1.125rem;
             display: block;
             color: #ffffff;
             text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+
+            &:last-child{
+                padding: 1.5rem 1.125rem;
+                display: flex;
+
+                @include breakpoint-up(large){
+                    padding: 1.5rem 2.875rem;
+                }
+            }
         }
     }
 
@@ -84,11 +95,14 @@
         @include breakpoint-up(medium) {
             height: 100%;
             width: 330px;
-            padding: 40px;
             background-color: $white;
             display: flex;
             align-items: center;
             justify-content: start;
+            margin-left: $tablet;
+        }
+        @include breakpoint-up(large){
+            margin-left: $desktop;
         }
     }
 
@@ -97,7 +111,7 @@
             height: 100%;
             background-color: $red;
 
-            // after htting tablet breakpoint(768px), fluidly reduce from
+            // after hitting tablet breakpoint(768px), fluidly reduce from
             // 57vw to 49vw at desktop breakpoint(1440px)
             flex-basis: calc(57vw - min( (0.172 * (100vw - 768px)), 8vw ) );
 
@@ -110,7 +124,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            // margin-left: 1.5rem;
+            @include breakpoint-up(large){
+                margin-left: 3.8125rem;
+                justify-content: flex-start;
+                font-size: $font-reg;
+            }
         }
+   
         a {
             // margin: 0 3.125rem;
 
@@ -118,16 +139,35 @@
             padding: 0.5rem;
 
             &:not(:last-child) {
-                margin-right: 0.5rem;
+                margin-right: 0.25rem;
+                @include breakpoint-up(large) {
+                    margin-right: 1rem;
+                }
+            }
+            &:nth-last-child(2){
+                margin-right: 2.5rem;
+            }
+            &:last-child{
+                padding: 1.5rem 1.125rem;
+
+                @include breakpoint-up(large){
+                    padding: 1.5rem 2.875rem;
+                }
             }
 
-            &:hover,
-            &:active {
-                color: $textBlack;
+            // &:hover,
+            // &:active {
+            //    font-weight: 700;
+            // }
+            &:hover:not(:last-child){
+                // prevent layout shift due to 
+                // size of a tags changing on font-weight change
+                text-shadow: 1px 0px 0px white;
             }
 
             // change color of current page's link
         }
+
         .current-link {
             color: $textBlack;
         }

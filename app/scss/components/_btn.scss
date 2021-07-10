@@ -33,7 +33,8 @@
         }
 
         &:hover {
-            background: $bgBlack;
+            background: $hover-2;
+            
 
             g {
                 stroke: white;
@@ -63,17 +64,11 @@
         // }
     }
 
-    // &--secondary {
-    //     background: white;
-    //     border: 1px solid $grayishDarkBlue;
-    //     padding-right: 2rem;
-    //     padding-left: 2rem;
-    //     margin-top: 2rem;
-    //     margin-bottom: 2rem;
-
-    //     &:hover {
-    //         background: $grayishDarkBlue;
-    //         color: $veryLightGray;
-    //     }
-    // }
+    &--secondary {
+        background: $red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
 }
