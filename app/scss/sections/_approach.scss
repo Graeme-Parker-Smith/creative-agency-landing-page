@@ -2,17 +2,14 @@
     // .approach mobile/default styles
     background-color: $red;
     color: $white;
-
     &__heading-container {
         margin: 4.5rem 0 6.375rem 0;
     }
-
     &__content {
         padding-left: 2rem;
         padding-right: 2rem;
         &__item {
             position: relative;
-
             &__number {
                 position: absolute;
                 top: -2.7rem;
@@ -32,34 +29,70 @@
             }
         }
     }
-
     // .approach Tablet Styles
-    @include breakpoint-up(medium){
-        
+    @include breakpoint-up(medium) {
         // section becomes flex container to divide heading and content items
         display: flex;
+        justify-content: flex-end;
         padding: 0;
         position: relative;
-        
+        background-color: transparent;
         &__heading-container {
-            background-color: $white;
+            padding-top: 5rem;
             color: $textBlack;
             margin: 0;
             width: 330px;
             height: 677px;
-            .heading{
+            .heading {
                 margin: 8rem 1.25rem auto 2.5rem;
             }
         }
         &__content {
-            position: absolute;
+            z-index: 2;
+            background-color: $red;
             height: 797px;
-            z-index: 10;
-            right: 0;
-            top: -6rem;
-            width: 438px;
-            margin-top: 9.4375rem;
+            width: calc(100% - 330px);
+            padding-top: 10rem;
+            // padding-left: calc(100% - 736px);
+            &__item {
+                width: 339px;
+                margin: 0 auto;
+            }
         }
     }
 
+    // .approach desktop styles
+    @include breakpoint-up(large) {
+        &__heading-container {
+            .heading {
+                width: 540px;
+                z-index: 3;
+                position: absolute;
+                margin-top: 400px;
+            }
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            height: 1100px;
+            &__item {
+                width: 50%;
+                margin: 0 7rem 0 auto;
+            }
+        }
+    }
+
+    @include breakpoint-up(xlarge) {
+        &__heading-container {
+            .heading {
+                left: 108px;
+            }
+        }
+        &__content {
+            width: calc(100% - 528px);
+            padding-left: 6rem;
+        }
+    }
 }
