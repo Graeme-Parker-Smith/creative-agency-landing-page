@@ -22,17 +22,36 @@
 	}
 }
 
+.colored-text {
+	color: $red;
+}
+
+.block-at-tablet {
+	@include breakpoint-up(medium){
+		display: block;
+	}
+}
+
 .heading {
 	font-weight: 800;
+	font-size: 32px;
+	line-height: 40px;
+	@include breakpoint-up(large){
+		font-size: 56px;
+		line-height: 64px;
+	}
 
 	&--hero {
 		margin: 3.5rem 0 1.5rem 0;
 		font-size: $font-lg; 
-
+		line-height: 2.5rem;
+		
 		@include breakpoint-up(medium){
+			line-height: 3.5rem;
 			font-size: $font-xlg;
 		}
 		@include breakpoint-up(large){
+			line-height: 5.5rem;
 			font-size: $font-jumbo;
 		}
 	}

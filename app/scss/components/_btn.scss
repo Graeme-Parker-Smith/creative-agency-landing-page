@@ -71,4 +71,15 @@
         justify-content: center;
     
     }
+    &--3 {
+        padding-bottom: 12px;
+        color: #f94f4f;
+        border-bottom: 2px solid #f94f4f;
+        display: inline-block;
+        /* height: 29px; */
+        font-weight: 800;
+        margin-bottom: 72px;
+        height: auto;
+        line-height: 100%;
+    }
 }
