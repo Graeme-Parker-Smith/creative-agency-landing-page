@@ -11,4 +11,39 @@
     p {
         margin: 32px 0 40px 0;
     }
+    position: relative;
+    &__content {
+        position: relative;
+        @include breakpoint-up(medium) {
+            position: static;
+            // padding-left: 4.5rem;
+            // padding-right:
+            width: 274px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        @include breakpoint-up(large) {
+            width: 445px;
+        }
+
+        .heading {
+            margin-top: 72px;
+        }
+
+        &__wave {
+            position: absolute;
+            height: 29px;
+            width: 63;
+            top: -88px;
+
+            @include breakpoint-up(medium) {
+                left: 348px;
+                top: 28.7%;
+            }
+            @include breakpoint-up(xlarge) {
+                left: 704px;
+                top: 35.7%;
+            }
+        }
+    }
 }
