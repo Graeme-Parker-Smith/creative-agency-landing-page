@@ -1,3 +1,43 @@
+
+.pad-20 {
+	padding: 20px;
+}
+
+.full-width-on-mobile {
+    @include breakpoint-down(small){
+        width: 100%;
+    }
+}
+
+// Visibility
+.hide-for-mobile {
+	@include breakpoint-down(small) {
+		display: none;
+	}
+}
+
+.hide-for-desktop {
+	@include breakpoint-up(medium) {
+		display: none;
+	}
+}
+
+.heading {
+	font-weight: 800;
+
+	&--hero {
+		margin: 3.5rem 0 1.5rem 0;
+		font-size: $font-lg; 
+
+		@include breakpoint-up(medium){
+			font-size: $font-xlg;
+		}
+		@include breakpoint-up(large){
+			font-size: $font-jumbo;
+		}
+	}
+}
+
 // Spacing
 .container {
 	margin: 0 auto;
@@ -114,21 +154,4 @@
 	grid-template-columns: repeat(2, 1fr);
 	justify-items: center;
 	align-items: center;
-}
-
-.pad-20 {
-	padding: 20px;
-}
-
-// Visibility
-.hide-for-mobile {
-	@include breakpoint-down(small) {
-		display: none;
-	}
-}
-
-.hide-for-desktop {
-	@include breakpoint-up(medium) {
-		display: none;
-	}
 }

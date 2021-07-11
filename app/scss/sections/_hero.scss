@@ -1,0 +1,26 @@
+.hero {
+    padding-bottom: 50px;
+    @include breakpoint-up(medium) {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-bottom: 0;
+        align-items: center;
+    }
+
+    &__content {
+        @include breakpoint-up(medium) {
+            position: absolute;
+            left: 0;
+            width: 55vw;
+            padding-right: 0;
+        }
+    }
+
+    &__cta {
+        height: 72px;
+        width: 177px;
+        font-weight: 800;
+        font-size: $font-xreg;
+        margin: 2.875rem 0;
+    }
+}
