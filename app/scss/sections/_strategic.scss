@@ -8,6 +8,8 @@
     }
     &__content {
         position: relative;
+        width: 327px;
+        margin: 0 auto;
 
         .heading {
             margin-top: 72px;
@@ -25,18 +27,15 @@
 
     @include breakpoint-up(medium) {
         display: flex;
-        align-items: flex-start;
         height: 538px;
         &__content {
-            @include breakpoint-up(medium) {
-                position: static;
-                width: 274px;
-                margin: 0 auto;
-                padding: 0;
-            }
+            align-self: center;
+            position: static;
+            width: 281px;
+
             &__wave {
                 left: 348px;
-                top: 18%;
+                top: 26%;
             }
         }
     }
@@ -44,6 +43,12 @@
     // Desktop Styles
     @include breakpoint-up(large) {
         &__content {
+            &__wave {
+                height: 60px;
+                width: 134px;
+                top: 17%;
+                left: 19.5rem;
+            }
         }
     }
 
@@ -62,18 +67,21 @@
         &__content {
             width: 445px;
             &__wave {
-                @include breakpoint-up(xlarge) {
-                    left: 704px;
-                    top: 35.7%;
-                }
+                left: 47%;
+                top: 31.7%;
             }
         }
     }
 
     // Very Large Desktop styles
-    @include breakpoint-up(xxlarge){
+    @include breakpoint-up(xxlarge) {
         picture {
             flex-basis: auto;
+        }
+        &__content{
+            &__wave{
+                left: 665px;
+            }
         }
     }
 }
