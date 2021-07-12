@@ -514,6 +514,38 @@ video {
   color: black;
 }
 
+.footer {
+  height: 391px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 1.5rem;
+}
+.footer .heading {
+  margin-bottom: 47px;
+}
+@media (min-width: 48em) {
+  .footer {
+    height: 251px;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+  .footer .heading {
+    width: 398px;
+    margin: 0;
+  }
+}
+@media (min-width: 64em) {
+  .footer {
+    height: 368px;
+  }
+  .footer .heading {
+    width: 635px;
+  }
+}
+
 .btn {
   height: 64px;
   font-family: inherit;
@@ -553,6 +585,10 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 199px;
+}
+.btn--secondary:hover {
+  background: #FF9393;
 }
 .btn--3 {
   padding-bottom: 12px;
@@ -620,6 +656,7 @@ video {
 }
 @media (min-width: 48em) {
   .slider {
+    height: 472px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -859,6 +896,11 @@ video {
   }
 }
 
+@media (min-width: 64em) {
+  .projects {
+    height: 728px;
+  }
+}
 .projects .slider #slide-one {
   background-image: url("/assets/mobile/image-slide-1.jpg");
 }

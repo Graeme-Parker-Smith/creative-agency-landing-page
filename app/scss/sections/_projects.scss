@@ -1,4 +1,7 @@
 .projects {
+    @include breakpoint-up(large){
+        height: 728px;
+    }
     .slider {
         #slide-one {
             background-image: url("/assets/mobile/image-slide-1.jpg");

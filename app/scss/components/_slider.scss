@@ -61,6 +61,7 @@
     }
     // start tablet styles
     @include breakpoint-up(medium) {
+        height: 472px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
