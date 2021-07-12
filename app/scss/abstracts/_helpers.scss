@@ -132,7 +132,7 @@
 		@include breakpoint-up(medium) {
 			padding-left: $tablet;
 		}
-		@include breakpoint-up(large) {
+		@include breakpoint-up(xlarge) {
 			padding-left: $desktop;
 		}
 	}

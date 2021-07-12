@@ -58,6 +58,9 @@
                 cursor: pointer;
             }
         }
+        #wavy-white-pattern {
+            display: none;
+        }
     }
     // start tablet styles
     @include breakpoint-up(medium) {
@@ -72,20 +75,46 @@
             height: 472px;
         }
         &__control {
+            position: relative;
             width: 51%;
             z-index: 2;
             height: 352px;
+            .heading {
+                width: 281px;
+            }
+            #wavy-white-pattern {
+                display: inline;
+                position: absolute;
+                top: 126px;
+                right: -67px;
+                bottom: unset;
+                left: unset;
+            }
         }
     }
 
     // start desktop styles
-    @include breakpoint-up(large){
-        &__container{
+    @include breakpoint-up(large) {
+        &__container {
             height: 728px;
         }
         &__control {
             height: 528px;
             padding-right: 2rem;
+            // to align text horizontally with approach heading
+            @include breakpoint-up(xlarge) {
+                padding-left: 149px;
+            }
+            .heading {
+                width: 60%;
+            }
+        }
+        #wavy-white-pattern {
+            position: absolute;
+            top: 186px;
+            right: -67px;
+            bottom: unset;
+            left: unset;
         }
     }
 }
