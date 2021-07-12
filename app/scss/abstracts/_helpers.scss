@@ -129,6 +129,12 @@
 	}
 	&--pl {
 		padding-left: $mobile;
+		@include breakpoint-up(medium) {
+			padding-left: $tablet;
+		}
+		@include breakpoint-up(large) {
+			padding-left: $desktop;
+		}
 	}
 }
 
