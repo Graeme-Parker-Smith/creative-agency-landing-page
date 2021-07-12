@@ -525,6 +525,9 @@ video {
 .footer .heading {
   margin-bottom: 47px;
 }
+.footer #footer-wavy {
+  display: none;
+}
 @media (min-width: 48em) {
   .footer {
     height: 251px;
@@ -543,6 +546,11 @@ video {
   }
   .footer .heading {
     width: 635px;
+  }
+  .footer #footer-wavy {
+    display: inline;
+    position: absolute;
+    left: -67px;
   }
 }
 

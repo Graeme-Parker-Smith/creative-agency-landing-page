@@ -8,9 +8,12 @@
     .heading {
         margin-bottom: 47px;
     }
+    #footer-wavy {
+        display: none;
+    }
 
     // Start tablet styles
-    @include breakpoint-up(medium){
+    @include breakpoint-up(medium) {
         height: 251px;
         padding: 0;
         flex-direction: row;
@@ -22,10 +25,15 @@
     }
 
     // Start Desktop Styles
-    @include breakpoint-up(large){
+    @include breakpoint-up(large) {
         height: 368px;
         .heading {
             width: 635px;
+        }
+        #footer-wavy {
+            display: inline;
+            position: absolute;
+            left: -67px;
         }
     }
 }
