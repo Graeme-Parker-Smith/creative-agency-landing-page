@@ -108,6 +108,9 @@
             .heading {
                 width: 60%;
             }
+            .heading.animation {
+                animation: fade 800ms ease-in-out forwards;
+            }
         }
         #wavy-white-pattern {
             position: absolute;

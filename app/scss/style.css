@@ -17,7 +17,7 @@
   }
 }
 .fade-in {
-  animation: fade-in 200ms ease-in-out forwards;
+  animation: fade-in 800ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -38,6 +38,14 @@
   animation: fade-out 200ms ease-in-out forwards;
 }
 
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -713,6 +721,11 @@ video {
 @media (min-width: 64em) {
   .slider__control .heading {
     width: 60%;
+  }
+}
+@media (min-width: 64em) {
+  .slider__control .heading.animation {
+    animation: fade 800ms ease-in-out forwards;
   }
 }
 @media (min-width: 64em) {
