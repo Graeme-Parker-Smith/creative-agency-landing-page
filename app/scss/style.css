@@ -170,6 +170,10 @@ video {
   vertical-align: baseline;
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
 .pad-20 {
   padding: 20px;
 }
