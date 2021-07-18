@@ -14,7 +14,11 @@
             }
 
             > span:nth-child(2) {
-                opacity: 0;
+                // opacity: 0;
+                transform: translateX(50px);
+                background: transparent;
+                -webkit-box-shadow: none;
+                box-shadow: none;
             }
 
             > span:last-child {
@@ -25,13 +29,11 @@
 
         .header__menu {
             display: block;
-            position: absolute;
-            right: 0;
-            top: 6.875rem;
-            padding: 1.75rem;
-            z-index: 2;
+            transform: translateY(16rem);
         }
     }
+    // End hamburger-open styles
+
     // full screen overlay hidden by default
     .overlay {
         opacity: 0;
@@ -41,7 +43,7 @@
         bottom: 0px;
         left: 0px;
         // background-color: $darkBlue;
-        background-image: linear-gradient(rgba(0,0,0,0.5), transparent);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
 
         // overlay becomes visible after adding "fade-in" class
         &.fade-in {
@@ -60,6 +62,20 @@
         @include breakpoint-up(medium) {
             height: 11.125rem;
             padding: 0;
+        }
+    }
+
+    .mobile-white-background {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        right: 0;
+        height: 110px;
+        background-color: white;
+        z-index: -1;
+        @include breakpoint-up(medium) {
+            display: none;
         }
     }
 
@@ -93,7 +109,19 @@
         width: 15.75rem;
         height: 18.25rem;
         margin: 0 2rem 0 auto;
-        display: none;
+        // display: none;
+
+        transition: transform 500ms ease-in-out;
+        position: absolute;
+        right: 0;
+        top: -11.425rem;
+        transform: translateY(-16rem);
+        padding: 1.75rem;
+        z-index: -2;
+
+        @include breakpoint-up(medium) {
+            display: none;
+        }
 
         a {
             font-size: $font-reg;
@@ -108,7 +136,6 @@
 
                 @include breakpoint-up(large) {
                     padding: 1.5rem 2.875rem;
-                   
                 }
             }
         }
