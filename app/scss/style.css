@@ -17,7 +17,7 @@
   }
 }
 .fade-in {
-  animation: fade-in 800ms ease-in-out forwards;
+  animation: fade-in 500ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -35,7 +35,7 @@
   }
 }
 .fade-out {
-  animation: fade-out 200ms ease-in-out forwards;
+  animation: fade-out 500ms ease-in-out forwards;
 }
 
 @keyframes fade {
@@ -379,12 +379,12 @@ video {
 }
 .header.open .header__menu {
   display: block;
-  transform: translateY(16rem);
+  transform: translateY(18.3rem);
 }
 .header .overlay {
   opacity: 0;
   position: fixed;
-  top: 0;
+  top: 110px;
   right: 0px;
   bottom: 0px;
   left: 0px;
@@ -450,7 +450,7 @@ video {
   position: absolute;
   right: 0;
   top: -11.425rem;
-  transform: translateY(-16rem);
+  transform: translateY(-18.3rem);
   padding: 1.75rem;
   z-index: -2;
 }

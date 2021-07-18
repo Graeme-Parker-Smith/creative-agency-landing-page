@@ -29,7 +29,7 @@
 
         .header__menu {
             display: block;
-            transform: translateY(16rem);
+            transform: translateY(18.3rem);
         }
     }
     // End hamburger-open styles
@@ -38,7 +38,7 @@
     .overlay {
         opacity: 0;
         position: fixed;
-        top: 0;
+        top: 110px;
         right: 0px;
         bottom: 0px;
         left: 0px;
@@ -115,7 +115,7 @@
         position: absolute;
         right: 0;
         top: -11.425rem;
-        transform: translateY(-16rem);
+        transform: translateY(-18.3rem);
         padding: 1.75rem;
         z-index: -2;
 
